@@ -1,57 +1,829 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-variation-settings: "wdth" 100;
+    font-size: 1.1rem;
 }
 
-h1, h2 {
-    text-align: center;
-    background-color: rgb(240, 240, 240);
-    border: 1px solid rgb(195, 231, 255);
-    border-radius: 5px;
-    box-sizing: border-box;
+/*Nav menu*/
+
+header {
+    display: flex;
+    position: fixed;
+    background-color: aliceblue;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vw;
+    max-height: 95px;
+    min-height: 55px;
+    width: 100%;
+    padding: 5px 10%;
+    border-bottom: 1px groove rgb(174, 223, 255);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   text-decoration: none;
+
+   max-width: 992px;
+   margin: 0 auto;
+
+}
+
+.header .nav-menu .logo  {
+    align-items: center;
+    justify-content:left;
+    cursor: pointer;
+    height: auto;
+    width: 8vw;
+    max-width: 90px;
+    min-width: 50px;
+    padding: 1%;
+    margin-right: 150px;
+}
+
+.header .logo img {
+    
+    transition: all 0.3s;
     width: 100%;
 }
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-links li {
+    padding: 0 8px;
+    transition: all 0.3s;
+    width: max-content;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+
+}  
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-style: normal;
+    color: rgb(0, 67, 129);
+    border-bottom: 0px solid;
+    font-size: 0.8rem;
+}
+
+.header .nav-links a:hover {
+
+    color: rgb(0, 140, 255);
+    border-bottom: 1px solid rgb(0, 140, 255);
+    padding-bottom: 8%;
+    border-radius: 3px;
+}
+
+.header .nav-menu .nav-links .nav-menu-link_active {
+    color: rgb(0, 183, 255);
+}
+
+.header .btn button {
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: rgb(0, 180, 252);
+    color: aliceblue;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.header .btn button:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 195, 255);
+    border: 1.5px solid rgb(0, 195, 255);
+    font-weight: 700;
+}
+
+.nav-toggle {
+    color: rgb(255, 255, 255);
+    background-color: rgb(39, 140, 255);
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px;
+    display: none;
+
+}
+
+.nav-toggle:hover {
+    color: rgb(226, 242, 255);
+    border: none;
+    transform: scale(1.1);
+}
+
+.button-cont {
+    margin-left: 0px;
+}
+
+.icon-whatsapp {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    cursor: pointer;
+    
+}
+
+.icon-whatsapp i {
+    font-size: 25px;
+    padding: 0 3px;
+    transition: all 0.2s;
+
+}
+
+.icon-whatsapp i:hover {
+    font-size: 35px;
+    padding: 0 3px;
+}
+
+
+
+/*body*/
 
 body {
     position: relative;
-    min-height: 100vh;
     padding-bottom: 4.5rem;
+    background-color: rgb(255, 255, 255);
+    padding-top: 5.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+   
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    background-color: rgb(230, 236, 255);
-}
 
-footer {
+.footer-nav {
     background-color: rgb(0, 140, 255);
-    border: 1px solid blue;
-    border-radius: 5px;
-    color: white;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 4.5rem;
+    position: absolute;
+    
+}
+
+.footer-nav .group-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer-nav .group-1 .box figure {
+    width: 100%;
+    height: 100%;   
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.footer-nav .group-1 .box figure img {
+    width: 100px;
+
+}
+
+.footer-nav .group-1 .box h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-nav .group-1 .box p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-nav .group-1 .social-red a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 132, 255);
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    transition: all 0.2s;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    border-radius: 35px;
+}
+
+.footer-nav .group-1 .social-red a:hover {
+    transform: scale(1.2);
+    background-color: rgb(0, 180, 252);
+    color: rgb(255, 255, 255);
+}
+
+.footer-nav .group-2  {
+    color: aliceblue;
+    display: flex;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: rgb(0, 39, 124);
+    justify-content: center;
+}
+
+.footer-nav .group-2 b{
+    font-size: 15px;
+}
+
+.footer-nav .group-2 small{
+    font-size: 15px;
+}
+
+@media screen and (min-width:10px) and (max-width: 234px) {
+
+    header {
+            margin-top: 0px;
+        }
+
+    .header .nav-menu .logo  {
+            align-items: center;
+            justify-content:left;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
+            max-width:65px;
+            min-width: 55px;
+            margin-top: 2px;
+        }  
+
+        .header .nav-links {
+            flex-direction:column;
+            align-items: flex-start;
+            transition: all 0.3s;
+            background-color: aliceblue;
+            position: fixed;
+            top: 57px;
+            width: 100%;
+            padding: 0rem 0px;
+            line-height: 2.5rem;
+            border-bottom: 0px groove rgb(53, 164, 255);
+            border-top: 1px solid rgb(219, 219, 219);
+            
+            height: calc(100%-3rem);
+            overflow-y: auto;
+            left: 100%;
+            transition: left 0.3s;
+    
+        }  
+    
+        .header .nav-links li {
+            width: 90%;
+            border-bottom: 1px groove rgb(194, 194, 194);
+        }
+    
+        .header .nav-links li:hover {
+            transform: scale(1.1);
+        }
+    
+        .header .nav-links a {
+            color: rgb(0, 81, 255);
+            border-bottom: 0px groove rgb(0, 140, 255);
+            font-weight: 600;
+            padding-left: 20px;
+        
+        }
+    
+        .header .nav-menu .nav-links .nav-menu-link_active {
+            color: rgb(0, 183, 255);
+        }
+    
+        .header .nav-links a:hover {
+    
+            color: rgb(0, 140, 255);
+            border-bottom: 0px solid rgb(0, 140, 255);
+            padding-bottom: 8%;
+            border-radius: 3px;
+        }
 
 
-img {
-    width: 20%;
+        .nav-toggle {
+                background-color: rgba(0, 89, 255, 0);
+                color: rgb(41, 109, 255);
+                border: none;
+                transition: all 0.3s;
+                cursor: pointer;
+                border-radius: 50px;
+                padding: 5px;
+                width: 50px;
+                height: auto;
+                display: block;
+                margin-left: -90px;
+            }
+            
+            .nav-toggle:hover {
+                color: rgb(255, 255, 255);
+                background-color: rgb(0, 84, 139);
+                border: none;
+                transform: scale(1.1);
+            }
+
+            .nav-links.nav-links_visible {
+                left: 0%;
+            }
+        
+            .header .btn button {
+                display: none;
+            }
+        
+            .button-cont {
+                display: none;
+            }
+
+            .icon-whatsapp {
+                display: none;
+            }
+        
+    
+}
+    
+
+@media screen and (min-width:239px) and (max-width: 368px) {
+
+    .body {
+        position: relative;
+        padding-bottom: 4.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+ }
+    .header {
+        height: 12vw;
+}
+     .header .nav-menu .logo  {
+            align-items: center;
+            justify-content:left;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
+            max-width:55px;
+            min-width: 50px;
+        }
+
+        .header .logo img:hover {
+            transform: scale(1.1);
+        }
+
+    .header .nav-links {
+        flex-direction:column;
+        align-items: flex-start;
+        transition: all 0.3s;
+        background-color: aliceblue;
+        position: fixed;
+        top: 56px;
+        width: 100%;
+        padding: 0rem 0px;
+        line-height: 2.5rem;
+        border-bottom: 0px groove rgb(53, 164, 255);
+        
+        height: calc(100%-3rem);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+
+    }  
+
+    .header .nav-links li {
+        width: 90%;
+        
+        border-bottom: 1px groove rgb(194, 194, 194);
+    }
+
+    .header .nav-links li:hover {
+        transform: scale(1.1);
+    }
+
+    .header .nav-links a {
+        color: rgb(0, 81, 255);
+        border-bottom: 0px groove rgb(0, 140, 255);
+        font-weight: 600;
+        padding-left: 20px;
+    
+    }
+
+    .header .nav-menu .nav-links .nav-menu-link_active {
+        color: rgb(0, 183, 255);
+    }
+
+    .header .nav-links a:hover {
+
+        color: rgb(0, 140, 255);
+        border-bottom: 0px solid rgb(0, 140, 255);
+        padding-bottom: 8%;
+        border-radius: 3px;
+    }
+
+    .nav-toggle {
+        background-color: rgba(0, 89, 255, 0);
+        color: rgb(41, 109, 255);
+        border: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border-radius: 50px;
+        padding: 5px;
+        display: block;
+        width: 50px;
+        height: auto;
+    }
+    
+    .nav-toggle:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 84, 139);
+        border: none;
+        transform: scale(1.1);
+    }
+
+    .nav-menu-btn-toggle {
+        
+    }
+
+    .nav-links.nav-links_visible {
+        left: 0%;
+    }
+
+    .header .btn button {
+        display: none;
+    }
+
+    .button-cont {
+        display: none;
+    }
+
+    .icon-whatsapp {
+        display: none;
+    }
+
+    .footer-nav .group-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+
+}
+
+
+@media screen and (min-width:368px) and (max-width: 575px) {
+    .body {
+        position: relative;
+        padding-bottom: 4.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    .header {
+        margin-top: 2px;
+        height: 12vw;
+    }
+
+    .header .nav-menu .logo  {
+            align-items: center;
+            justify-content:left;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
+            max-width:55px;
+            min-width: 50px;
+    }
+
+    .header .logo img:hover {
+            transform: scale(1.1);
+    }
+
+    .header .nav-links {
+        flex-direction:column;
+        align-items: flex-start;
+        transition: all 0.3s;
+        background-color: aliceblue;
+        position: fixed;
+        top: 57px;
+        width: 100%;
+        padding: 0rem 0px;
+        line-height: 2.5rem;
+        border-bottom: 0px groove rgb(53, 164, 255);
+        border-top: 1px solid rgb(219, 219, 219);
+        
+        height: calc(100%-3rem);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+
+    }  
+
+    .header .nav-links li {
+        width: 90%;
+        border-bottom: 1px groove rgb(194, 194, 194);
+    }
+
+    .header .nav-links li:hover {
+        transform: scale(1.1);
+    }
+
+    .header .nav-links a {
+        color: rgb(0, 81, 255);
+        border-bottom: 0px groove rgb(0, 140, 255);
+        font-weight: 600;
+        padding-left: 20px;
+    
+    }
+
+    .header .nav-menu .nav-links .nav-menu-link_active {
+        color: rgb(0, 183, 255);
+    }
+
+    .header .nav-links a:hover {
+
+        color: rgb(0, 140, 255);
+        border-bottom: 0px solid rgb(0, 140, 255);
+        padding-bottom: 8%;
+        border-radius: 3px;
+    }
+
+    .nav-toggle {
+        color: rgb(255, 255, 255);
+        background-color: none !important;
+        border: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border-radius: 150px;
+        padding: 1px 0;
+        display: block;
+        font-size: 25px;
+        width: 50px;
+        height: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .nav-toggle:hover {
+        color: rgb(226, 242, 255);
+        border: none;
+        transform: scale(1.1);
+    }
+
+    .nav-menu-btn-toggle {
+        
+    }
+
+    .nav-links.nav-links_visible {
+        left: 0%;
+    }
+
+    .header .btn button {
+        display: none;
+    }
+
+    .button-cont {
+        display: none;
+    }
+
+    .icon-whatsapp {
+        display: flex;
+        align-items: center;
+    }
+
+    .body {
+        position: relative;
+        padding-bottom: 4.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+     }
+
+    .footer-nav .group-1 {
+        width: 100%;
+        grid-template-columns: repeat(3, fr);
+        grid-gap:5px;
+        padding: 25px 0px;
+    }
+
+    .footer-nav .group-1 .box figure {
+        width: 100%;
+        height: 100%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer-nav .group-1 .box figure img {
+        width: 100px;
+    
+    }
+    
+    .footer-nav .group-1 .box h2 {
+        color: white;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .footer-nav .group-1 .box p {
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .footer-nav .group-1 .social-red a{
+        display: inline-block;
+        text-decoration: none;
+        color: rgb(0, 132, 255);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        transition: all 0.2s;
+        margin-right: 5px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        justify-content: center;
+        border-radius: 35px;
+    }
+    
+    .footer-nav .group-1 .social-red a:hover {
+        transform: scale(1.2);
+        background-color: rgb(0, 180, 252);
+        color: rgb(255, 255, 255);
+    }
+    
+    .footer-nav .group-2  {
+        color: aliceblue;
+        display: flex;
+        padding: 15px 10px;
+        text-align: center;
+        background-color: rgb(0, 39, 124);
+        justify-content: center;
+    }
+    
+    .footer-nav .group-2 b{
+        font-size: 15px;
+    }
+    
+    .footer-nav .group-2 small{
+        font-size: 15px;
+    }
+
+}
+
+    @media screen and ( min-width:576px ) and (max-width: 767px) {
+
+        .header {
+            margin-top: 4px;
+            height: 12vw;
+        }
+
+        .header .nav-menu .logo  {
+            align-items: center;
+            justify-content:left;
+            cursor: pointer;
+            height: auto;
+            width: 100%;
+            max-width: 100px;
+            min-width: 75px;
+            margin-right:0px;
+        }
+
+        .header .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .header .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            background-color: aliceblue;
+            width: 100%;
+            height: auto;
+            padding: 0rem 0px;
+            border-bottom: 0px groove rgb(53, 164, 255);
+
+        }  
+
+        .header .nav-links li {
+            padding: 0 5px;
+            transition: all 0.3s;
+            width: max-content;
+            text-transform: uppercase;
+            text-decoration: none;
+            list-style: none;
+        }  
+
+        .button-cont {
+            display: none !important;
+        }
+
+        .body {
+            position: relative;
+            padding-bottom: 4.5rem;
+            background-color: rgb(255, 255, 255);
+            padding-top: 1rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
+         }
+
+        
+
+        .footer-nav .group-1 {
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            padding: 35px 0px;
+        }
+
+
+}
+
+@media screen and ( min-width:768px ) and (max-width: 991px){
+    .body {
+        position: relative;
+        padding-bottom: 4.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+}
+    .header {
+        height: 12vw;
+}
+
+    .header .nav-menu .logo  {
+        align-items: center;
+        justify-content:left;
+        position: relative;
+        cursor: pointer;
+        height: auto;
+        width: 100%;
+        max-width: 110px;
+        min-width: 90px;
+        padding: 1%;
+        margin-right: 100px;
+    }
+}
+
+@media screen and ( min-width:992px ) and (max-width: 1600px) {
+    .body {
+        position: relative;
+        padding-bottom: 4.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-top: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+}
+    .header {
+        height: 12vw;
+}
+
+    .header .nav-menu .logo  {
+        align-items: center;
+        justify-content:left;
+        position: relative;
+        cursor: pointer;
+        height: auto;
+        width: 100%;
+        max-width: 100px;
+        min-width: 90px;
+        padding: 1%;
+        margin-right: 100px;
+    }
+
+    
+
 }
