@@ -188,7 +188,7 @@ body {
 
 
 .footer-nav {
-    background-color: rgb(0, 140, 255);
+    background-color: rgb(39, 136, 215);
     width: 100%;
     position: absolute;
     
@@ -232,7 +232,7 @@ body {
 .footer-nav .group-1 .social-red a{
     display: inline-block;
     text-decoration: none;
-    color: rgb(0, 132, 255);
+    color: rgb(19, 44, 167);
     width: 35px;
     height: 35px;
     line-height: 35px;
@@ -246,7 +246,7 @@ body {
 
 .footer-nav .group-1 .social-red a:hover {
     transform: scale(1.2);
-    background-color: rgb(0, 180, 252);
+    background-color: rgb(0, 134, 252);
     color: rgb(255, 255, 255);
 }
 
@@ -294,7 +294,7 @@ body {
             width: 100%;
             padding: 0rem 0px;
             line-height: 2.5rem;
-            border-bottom: 0px groove rgb(53, 164, 255);
+            border-bottom: 0px groove rgb(53, 134, 255);
             border-top: 1px solid rgb(219, 219, 219);
             
             height: calc(100%-3rem);
@@ -322,7 +322,7 @@ body {
         }
     
         .header .nav-menu .nav-links .nav-menu-link_active {
-            color: rgb(0, 183, 255);
+            color: rgb(34, 188, 254);
         }
     
         .header .nav-links a:hover {
@@ -665,7 +665,7 @@ body {
     .footer-nav .group-1 .social-red a{
         display: inline-block;
         text-decoration: none;
-        color: rgb(0, 132, 255);
+        color: rgb(56, 152, 243);
         width: 30px;
         height: 30px;
         line-height: 30px;
@@ -679,7 +679,7 @@ body {
     
     .footer-nav .group-1 .social-red a:hover {
         transform: scale(1.2);
-        background-color: rgb(0, 180, 252);
+        background-color: rgb(121, 211, 247);
         color: rgb(255, 255, 255);
     }
     
@@ -824,6 +824,28 @@ body {
         margin-right: 100px;
     }
 
+   .provincias {
+        border: 2px solid rgb(231, 230, 230);
+        border-radius: 5px;
+        margin: 1%;
+        background-color: rgba(243, 241, 225, 0.358);
+        color: rgb(237, 10, 10);
+        padding-right: 100px;
+        padding-left: 60px;
+        text-align: center;
+      
+   } 
+.provincias{
+    max-width:25%;
+    text-align:center;
     
+}
+section{ 
+    display: flex;
+}
+.logoprov{
 
+    width: 200px;
+    align-self: center;
+}
 }
