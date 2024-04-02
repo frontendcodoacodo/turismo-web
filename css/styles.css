@@ -890,9 +890,9 @@ section{
     box-sizing:initial;
     font-family: "Roboto Condensed";
     text-shadow: 3px 3px 0px rgb(1, 17, 50);
-    font-variant: small-caps;
+   
     font-optical-sizing: auto;
-    font-weight: 900;
+    font-weight: 800;
     font-style:normal;
     font-size: 2rem;
     text-align:center;
