@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -843,7 +843,7 @@ body {
  #prov_name {
     
     color: rgb(15, 7, 0);
-    font-family: "Nunito";
+    font-family: "Roboto Condensed";
     font-size: 2em;
     font-weight: 700;
     text-shadow: 3px 2px 0px whitesmoke;
@@ -888,7 +888,7 @@ section{
     padding: 5%;
     padding-top: 1;
     box-sizing:initial;
-    font-family: "Nunito";
+    font-family: "Roboto Condensed";
     text-shadow: 3px 3px 0px rgb(1, 17, 50);
     font-variant: small-caps;
     font-optical-sizing: auto;
