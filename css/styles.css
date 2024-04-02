@@ -825,69 +825,83 @@ body {
     }
 
     .provincias{
-        border: 2px solid rgb(231, 230, 230);
-        border-radius: 10px;
-        margin: 2%;
-        flex: content;  
+        border:0.3em solid rgb(90, 89, 89);
+        border-radius: 1px;
+        height: 250px;
+        width: 250px;
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center center;
+        box-shadow:2px 2px 0px rgba(114, 114, 114, 0.502);
     }
    .provincias, #prov_name{
         margin: 2%;
-        flex: content;         
-   } 
+       
+       } 
 
 
  #prov_name {
     
     color: rgb(15, 7, 0);
-    font-family: "Advent Pro";
-    font-size: 2rem;
+    font-family: "Nunito";
+    font-size: 2em;
     font-weight: 700;
     text-shadow: 3px 2px 0px whitesmoke;
     font-variant: small-caps;
     text-align: center;
     position:relative;
     top: 40%;
-    background-color: rgba(245, 238, 220, 0.637);
+    background-color: rgba(245, 238, 220, 0.765);
    
 
   }
 
 .tucuman {
             background-image: url(../img/tucumancasa.jpg);
-            background-size: cover;
-        
-  background-repeat:no-repeat;
-  background-position: center center;
-  height: 300px;
   
-
 }
+
+.corrientes {
+    background-image: url(../img/corrientes.jpeg);
+    
+}
+
+.sanjuan {
+    background-image: url(../img/sanjuan.jpeg);
+   
+}
+
+.santafe {
+    background-image: url(../img/santafe.jpeg);
+   
+}
+
 section{ 
     display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    
 }
-.logoprov{
 
-    width: 200px;
-    align-self: center;
-}
 .parrafoppal{ 
     margin: 10;
     padding: 5%;
     padding-top: 1;
     box-sizing:initial;
-    font-family: "Advent Pro";
-    text-shadow: 2px 2px 0px rgb(240, 240, 239);
+    font-family: "Nunito";
+    text-shadow: 3px 3px 0px rgb(1, 17, 50);
     font-variant: small-caps;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 900;
     font-style:normal;
     font-size: 2rem;
     text-align:center;
-    color:rgb(10, 10, 10);
-    background-image: url(../img/argentina.jpg);
+    color:rgb(254, 253, 253);
+    background-image: url(../img/arg.jpg);
     background-size:cover; 
     background-repeat:no-repeat;
     background-position: center center;
+    border:0.1em solid rgba(90, 89, 89, 0.696);
     ;
    
     }
