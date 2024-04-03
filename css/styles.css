@@ -306,7 +306,7 @@ body {
         font-size: 2rem;
         text-align:center;
         color:rgb(254, 253, 253);
-        background-image: url(/img/arg.jpg);
+        background-image: url(../img/arg.jpg);
         background-size:cover; 
         background-repeat:no-repeat;
         background-position: center center;
