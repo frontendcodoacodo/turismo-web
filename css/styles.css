@@ -259,22 +259,22 @@ body {
     }
 
     .tucuman {
-        background-image: url(/img/tucumancasa.jpg);
+        background-image: url(../img/tucumancasa.jpg);
   
     }
 
     .corrientes {
-        background-image: url(/img/corrientes.jpeg);
+        background-image: url(../img/corrientes.jpeg);
     
     }
 
     .sanjuan {
-        background-image: url(/img/sanjuan.jpeg);
+        background-image: url(../img/sanjuan.jpeg);
     
     }
 
     .santafe {
-        background-image: url(/img/santafe.jpeg);
+        background-image: url(../img/santafe.jpeg);
     
     }
 
