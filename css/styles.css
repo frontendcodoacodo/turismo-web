@@ -27,6 +27,7 @@ header {
     width: 100%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
+    z-index: 999;
 }
 
 .header .logo img {
@@ -219,11 +220,22 @@ body {
     position: relative;
     padding-bottom: 4.5rem;
     background-color: rgb(255, 255, 255);
-    padding-top: 5.5rem;
+    padding-top: 5rem;
     padding-left: 0rem;
     padding-right: 0rem;
-   
+    height: 100vh;   
     }
+
+    .swiper {
+        width: 100%;
+        height: 95%;
+      }
+
+      .swiper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
     /*Main Provincias  */
 
@@ -352,6 +364,11 @@ footer {
 .footer-nav .row .col .logo  {
     width: 200px;
     margin-bottom: 30px;
+    transition: all 0.3s;
+}
+
+.footer-nav .row .col .logo:hover  {
+    transform: scale(1.1);
 }
 
 .footer-nav .row .col h3 {
@@ -397,7 +414,7 @@ footer {
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
-    font-size: 20px;color: #0059ff;
+    font-size: 20px;color: #003cff;
     background-color: #eee;
     margin-right: 15px;
     cursor: pointer;
@@ -530,6 +547,7 @@ footer {
     footer {
         bottom: unset;
         position: absolute;
+        z-index: 1;
      }
 
      .footer-nav .row { 
@@ -753,9 +771,9 @@ footer {
         position: relative;
         padding-bottom: 4.5rem;
         background-color: rgb(255, 255, 255);
-        padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
+        padding-top: 0rem;
      }
 
      footer {
@@ -782,7 +800,6 @@ footer {
     @media screen and ( min-width:576px ) and (max-width: 767px) {
 
         header {
-            background-color: aliceblue;
             position: absolute;
         }
 
@@ -858,12 +875,11 @@ footer {
         }
 
         body {
-            position: relative;
             padding-bottom: 4.5rem;
             background-color: rgb(255, 255, 255);
-            padding-top: 3rem;
             padding-left: 0rem;
             padding-right: 0rem;
+            padding-top: 0rem;
          }
 
         
@@ -1037,7 +1053,6 @@ footer {
 @media screen and ( min-width:992px ) and (max-width: 1600px) {
     header {
         position: fixed;
-        background-color: aliceblue;
         display: flex;
         height: 100px;
         border-bottom: 1px groove rgba(174, 223, 255, 0.658);
@@ -1048,6 +1063,7 @@ footer {
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
         align-items: center;
+        z-index: 999;
     }
     
     .header .logo  {
@@ -1167,10 +1183,18 @@ footer {
         padding-right: 0rem;
      }
 
-     footer {
-        bottom: unset;
-        position: absolute;
+     .swiper {
+        height: 100%;
      }
+
+     .swiper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
      .footer-nav .copyright {
         text-align: center;
@@ -1310,11 +1334,6 @@ footer {
         padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
-     }
-
-     footer {
-        bottom: unset;
-        position: absolute;
      }
     
 }
