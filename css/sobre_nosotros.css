@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    border: 0;
+}
+
+/*body*/
+
+body {
+    position: relative;
+    padding-bottom: 0rem;
+    background-color: #eee;
+    padding-top: 5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        background-color: #eee;
+        min-height: calc(100vh - 100px - 50px);
+
+    } 
+
+
+    .about_section {
+        background-size: 55%;
+        background-color: #eee;
+        overflow: hidden;
+        padding: 100px 0;
+        background-image: url(../img/VISITA\ ARGENTINA\ \,\ VIVI\ ARGENTINA.gif);
+        background-repeat: no-repeat;
+        background-position: left center;
+
+    }
+    
+    .inner_container {
+        width: 55%;
+        float: right;
+        background-color: aliceblue;
+        padding: 150px;
+    }
+
+    .inner_container h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    .text {
+        font-size: 13px;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-around;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: capitalize;
+    }
+
+    @media screen and (max-width: 991px) {
+
+        .about_section {
+            background-size: 100%;
+            padding: 100px;
+    
+        }
+
+        .inner_container {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .inner_container {
+            padding: 80px;
+        }
+
+        .about_section {
+            background-size: 100%;
+            padding: 50px;
+    
+        }
+
+    }
