@@ -5,7 +5,7 @@ header.innerHTML = `
     <div class="logo">
         <a href="index.html"><img src="img/logo-turismo.png" alt="logo-viajes"></a>
     </div>            
-        <ul class="navbar-links"> 
+        <ul class="navbar-links">
         <li><a href="index.html">Inicio</a></li>                
         <li><a href="#">Donde Ir</a></li> 
         <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li> 
