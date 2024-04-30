@@ -11,8 +11,8 @@ footer.innerHTML = `
         </div>
         <div class="col">
             <h3>Datos de Contacto <div class="underline"><span></span></div> </h3>
-            <p>Lorem ipsum dolor </p>
-            <p>dipisicing elit. Deserunt qui nisi, </p>
+            <p>República de Eslovenia 1901, C1426  </p>
+            <p><br> Ciudad Autónoma de Buenos Aires </p>
             <p class="email-id">experienciaargentinaviajes@gmail.com</p>
             <h4>+54 011 101010</h4>
         </div>

@@ -169,7 +169,9 @@
 
 @media screen and (max-width: 367px) {
 
-
+    .header {
+        justify-content: space-between;
+    }
 
     .header .logo img {
     
@@ -211,7 +213,7 @@
 
     
     .header label {
-        display: initial;
+        display: flex;
     }    
     
     #menu-bar:checked ~ .navbar {
