@@ -16,6 +16,10 @@ html {
     font-size: 1.1rem;
     border: 0;
 }
+.title{
+    color: rgb(19, 89, 150);
+    font-size: 50px; 
+}
 
 /*body*/
 
@@ -30,7 +34,7 @@ body {
 
     .container {
         margin: 0 auto;
-        background-color: #eee;
+        background-color: white;
         min-height: calc(100vh - 100px - 50px);
 
     } 
@@ -62,7 +66,7 @@ body {
     }
 
     .text {
-        font-size: 13px;
+        font-size: 18px;
         line-height: 30px;
         text-align: left;
         margin-bottom: 40px;
