@@ -4,10 +4,14 @@
     background-color: white;
     height: 100px;
     position: absolute;
+    display: flex;
     border-bottom: 1px groove rgba(174, 223, 255, 0.658);
-    padding: 0 2rem;
+    padding: 0px 2rem;
+    align-items: center;
+    justify-content: space-around;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
@@ -17,73 +21,79 @@
 .header .logo img {
     
     transition: all 0.3s;
-    width: 100%;
+    max-width: 180px;
 }
 
 .header .logo img:hover {
     transform: scale(1.2);
 }
 
-.navbar {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-.header .navbar ul li {
-    list-style: none;
-}
-
 .header .navbar .navbar-links {
-    display: flex;
-    gap: 2rem;
-    max-width: max-content;
-    align-items: center;
-    justify-content: space-between;    
+    list-style: none;
+    
 }
 
 .header .navbar .navbar-links li {
-    transition: all 0.3s;
-
+    position: relative;
+    float: left;
+    list-style: none;    
 }
 
-.header .navbar .navbar-links li:hover{
-    transform: scale(1.1);  
-}
-
-.header .navbar .navbar-links li a{
-    transition: all 0.3s;
-    list-style: none;
+.header .navbar .navbar-links li a {
+    font-size: 15px;
+    display: block;
     text-decoration: none;
-    font-size: 0.8rem;
-    color: rgb(0, 67, 129);
+    transition: all 0.3s;
+    padding: 2rem 10px;
+    color: rgb(77, 154, 255);
+    border-bottom: 1px solid rgba(77, 154, 255, 0);
+}  
+
+.header .navbar .navbar-links li a:hover { 
+    border-bottom: 1px solid rgb(0, 110, 255);
 
 }
 
-.header .navbar .navbar-links li a:hover{
-    border-bottom: 1px groove rgb(0, 67, 129);
-    padding-bottom: 10%;
-    border-radius: 4px;
-}
-
-.header .navbar .toggle_btn {
-    color: rgb(70, 70, 70);
-    font-size: 1.5rem;
-    transition: all 0.2s;
-    cursor: pointer;
+.navbar .navbar-links li .submenu {
+    position: absolute;
+    color: aliceblue;
+    left: 0;
+    width: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(77, 154, 255);
+    border-radius: 15px;
     display: none;
+    transition: all 0.3s;
 }
 
-.header .navbar .toggle_btn:hover {
-    transform: scale(1.2);
-
+.navbar .navbar-links li .submenu li {
+    width: 100%;
+    border-bottom: 1px groove rgba(247, 247, 247, 0.219);
+    
 }
 
+.navbar .navbar-links li .submenu li a {
+    color: rgb(255, 255, 255);
+    padding: 20px 0px 20px 10px;
+}    
+
+.navbar .navbar-links li .submenu li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(77, 154, 255);
+}
+
+.navbar .navbar-links li:focus-within > ul,
+.navbar .navbar-links li:hover > ul {
+    display: initial;
+} 
+
+
+.buttons {  
+
+    display: block;
+}
+    
 .action_btn {
     background-color: rgb(0, 195, 255);
     color: aliceblue;
@@ -98,6 +108,7 @@
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
+    margin-right: 5rem;
 }
 
 .action_btn:hover {
@@ -111,282 +122,171 @@
     scale: 0.95;
 }
 
-.icon-whatsapp {
+.buttons .fa-brands {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-left: 10px;
     display: inline-block;
     cursor: pointer;
     
 }
 
-.icon-whatsapp i {
+.buttons .fa-brands {
     font-size: 25px;
     padding: 0 3px;
     transition: all 0.2s;
 
 }
 
-.icon-whatsapp i:hover {
-    font-size: 35px;
-    padding: 0 3px;
+.buttons .fa-brands:hover {
+    transform: scale(1.2);
 }
 
-/*Drop-down menu*/
+.fa-bars:before, .fa-navicon:before {
+    content: "\f0c9";
+}
 
-.dropdown_menu {
-    position: absolute;
+.fa-bars:before, .fa-navicon:before #text {
+    font-size: 15px;
+}
+
+
+#menu-bar {
     display: none;
-    height: 0;
-    right: 2rem;
-    top: 100px;
-    width: 300px;
-    background-color: rgba(0, 89, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 5px 5px 0px 5px;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown_menu.open {
-    height: 250px;
-}
-
-.header .dropdown_menu li {
-    list-style: none;
-    padding: 0.7rem;
-    display: flex;
+.header label {
+    cursor: pointer;
+    display: none;
     align-items: center;
-    justify-content: center;
 }
 
-.header .dropdown_menu li a {
-    text-decoration: none;
-    font-size: 0.9rem;
-    color: aliceblue;
-    transition: all 0.3s;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.header label h6 {
+    margin-left: 5px;
 }
 
-.header .dropdown_menu li a:hover {
-    color: rgb(103, 174, 255);
-    border-bottom: 1px groove rgb(103, 174, 255);
-    padding-bottom: 0.5rem;
-    border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+  
 
-.header .dropdown_menu a {
-    list-style: none;
-    text-decoration: none;
-}
-
-.header .dropdown_menu .action_btn {
-    justify-content: center;
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-}
+@media screen and (max-width: 367px) {
 
 
 
-@media screen and (min-width:0px) and (max-width: 238px) {
-
-    .header .logo  {
-        align-items: center;
-        justify-content:left;
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-        max-width: 130px;
-        min-width: 75px;
-        margin-right:0px;
-    }
-
-    .header .logo img:hover {
-        transform: scale(1.1);
+    .header .logo img {
+    
+        transition: all 0.3s;
+        max-width: 150px;
     }
     
-
-    .header .navbar .navbar-links, .navbar .action_btn {
+    .navbar {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: aliceblue;
+        color: rgb(0, 110, 255);
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
         display: none;
-    }
 
-    .header .navbar .toggle_btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-        left: 2rem;
-        width: unset;
-        background-color: rgba(0, 89, 255, 0.1);
-        backdrop-filter: blur(15px);
-        overflow: hidden;
-        padding: 2px 2px 0px 2px;
-        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .header .dropdown_menu li a {
-        text-decoration: none;
-        font-size: 0.8rem;
-        color: aliceblue;
-        transition: all 0.3s;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header .dropdown_menu .action_btn {
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        list-style: none;
-        text-decoration: none;
-    }
-
-    .icon-whatsapp {
-        display: none;
-        align-items: center;
-    }
-}    
-
-@media screen and (min-width:239px) and (max-width: 367px) {
-
-    .header .logo  {
-        align-items: center;
-        justify-content:left;
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-        max-width: 130px;
-        min-width: 75px;
-        margin-right:0px;
-    }
-
-    .header .logo img:hover {
-        transform: scale(1.1);
     }
     
-
-    .header .navbar .navbar-links, .navbar .action_btn {
-        display: none;
-    }
-
-    .header .navbar .toggle_btn {
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-        left: 2rem;
-        width: unset;
-        background-color: rgba(0, 89, 255, 0.1);
-        backdrop-filter: blur(15px);
-        overflow: hidden;
-        padding: 2px 2px 0px 2px;
-        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .header .dropdown_menu li a {
-        text-decoration: none;
-        font-size: 0.8rem;
-        color: aliceblue;
-        transition: all 0.3s;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header .dropdown_menu .action_btn {
+    .navbar .navbar-links li{
         width: 100%;
-        justify-content: center;
-        display: flex;
-        list-style: none;
-        text-decoration: none;
+    }
+    
+    .header .navbar .navbar-links li a {
+        border-bottom: 1px solid rgb(209 229 255);
+    }
+    
+    .navbar .navbar-links li .submenu {
+        position: relative;
+        width: 100%;
+    }
+    
+    .navbar .navbar-links li .submenu li {
+        background-color:rgb(0, 110, 255);
+        padding-left: 15px;
+    }
+    
+    .navbar .navbar-links li .submenu li a {
+        color: aliceblue;
     }
 
-    .icon-whatsapp {
-        display: none;
-        align-items: center;
+    
+    .header label {
+        display: initial;
+    }    
+    
+    #menu-bar:checked ~ .navbar {
+        display: initial;
     }
+
+    .buttons {
+    display: none;
+    }
+    
 }    
 
 @media screen and (min-width:368px) and (max-width: 575px) {
 
-    .header .logo  {
-        align-items: center;
-        justify-content:left;
-        cursor: pointer;
-        margin-right:0px;
+    .header {
+        justify-content: space-between;
     }
 
-    .header .logo img:hover {
-        transform: scale(1.1);
-    }
 
     .header .logo img {
-        
+    
         transition: all 0.3s;
-        height: auto;
+        max-width: 160px;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: aliceblue;
+        color: rgb(0, 110, 255);
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        display: none;
+
+    }
+    
+    .navbar .navbar-links li{
         width: 100%;
-        max-width: 140px;
-        min-width: 120px;
-        transition: all 0.3s;
+    }
+    
+    .navbar .navbar-links li .submenu {
+        position: relative;
+        width: 100%;
+    }
+    
+    .navbar .navbar-links li .submenu li {
+        background-color:rgb(0, 110, 255);
+        padding-left: 15px;
+    }
+    
+    .header .navbar .navbar-links li a {
+        padding: 1.5rem 10px;
+        border-bottom: 1px solid rgb(209 229 255);
+    }
+    
+    .navbar .navbar-links li .submenu li a {
+        color: aliceblue;
+    }
+
+    
+    .header label {
+        display: flex;
+    }    
+    
+    #menu-bar:checked ~ .navbar {
+        display: initial;
     }
     
 
-    .header .navbar .navbar-links, .navbar .action_btn {
-        display: none;
-    }
-
-
-    .header .navbar .toggle_btn {
-        display: block;
-        
-    }
-
-    .dropdown_menu {
-        display: block;
-        width: unset;
-        align-items: center;
-        justify-content: center;
-        left: 2rem;
-        background-color: rgba(0, 89, 255, 0.1);
-        backdrop-filter: blur(15px);
-        overflow: hidden;
-        padding: 2px 2px 0px 2px;
-        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .header .dropdown_menu li a {
-        text-decoration: none;
-        font-size: 0.8rem;
-        color: aliceblue;
-        transition: all 0.3s;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header .dropdown_menu .action_btn {
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        list-style: none;
-        text-decoration: none;
-    }
-
-    .icon-whatsapp {
-        display: none;
+    .buttons {
+    display: none;
     }
 
 }
 
-@media screen and ( min-width:576px ) and (max-width: 767px) {
+@media screen and (min-width: 576px) and (max-width: 1024px) {
 
     .header .logo  {
         align-items: center;
@@ -402,339 +302,57 @@
     .header .logo img:hover {
         transform: scale(1.1);
     }
-
-    .header .navbar .navbar-links, .navbar .action_btn {
-        display: none;
-    }
-
-
-    .header .navbar .toggle_btn {
-        display: block;
-        margin-right: -55%;
-
-    }
-
-    .header .dropdown_menu .action_btn {
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        list-style: none;
-        text-decoration: none;
-    }
-
-    .header .dropdown_menu {
-        display: block;
-        left: 2rem;
-        width: unset;
-        background-color: rgba(0, 89, 255, 0.1);
-        backdrop-filter: blur(15px);
-        overflow: hidden;
-        padding: 2px 2px 0px 2px;
-        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .header .dropdown_menu li a {
-        text-decoration: none;
-        font-size: 1rem;
-        color: aliceblue;
-        transition: all 0.3s;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .icon-whatsapp {
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        margin-left: 5px;
-        display: flex;
-        cursor: pointer;
-        
-    }
-    
-    .icon-whatsapp i {
-        font-size: 25px;
-        padding: 0 3px;
-        transition: all 0.2s;
-    
-    }
-}    
-
-@media screen and ( min-width:768px ) and (max-width: 991px){
-
-    .header {
-        position: fixed;
-        display: flex;
-        height: 100px;
-        border-bottom: 1px groove rgba(174, 223, 255, 0.658);
-        padding: 0 2rem;
-        top: 0;
-        left: 0;
-        width: 100%;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        text-transform: uppercase;
-        align-items: center;
-        z-index: 999;
-    }
-    
-    .header .logo  {
-        align-items: center;
-        justify-content:left;
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-        max-width: 180px;
-        min-width: 130px;
-        margin-right:0px;
-        transition: all 0.3s;
-
-    }
-    
-    .header .logo:hover {
-        transform: scale(1.0);
-    }
     
     .navbar {
-        display: flex;
-        width: 100%;
-        height: 80px;
-        max-width: 1200px;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: space-between;
-        box-sizing: border-box;
-    }
-    
-    .header .navbar .navbar-links {
-        display: flex;
-        gap: 1.5rem;
-        max-width: max-content;
-        align-items: center;
-        justify-content: center;
-        margin-left: 5%;
-    }
-    
-    .header .navbar .toggle_btn {
-        color: rgb(70, 70, 70);
-        font-size: 1.5rem;
-        transition: all 0.2s;
-        cursor: pointer;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: aliceblue;
+        color: rgb(0, 110, 255);
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
         display: none;
+
     }
     
-    .header .navbar .toggle_btn:hover {
-        transform: scale(1.2);
-    
+    .navbar .navbar-links li{
+        width: 100%;
     }
     
-    .action_btn {
-        background-color: rgb(0, 195, 255);
+    .header .navbar .navbar-links li a {
+        border-bottom: 1px solid rgb(194, 220, 255);
+    }
+    
+    .navbar .navbar-links li .submenu {
+        position: relative;
+        width: 100%;
+    }
+    
+    .navbar .navbar-links li .submenu li {
+        background-color:rgb(0, 110, 255);
+        padding-left: 15px;
+    }
+    
+    .navbar .navbar-links li .submenu li a {
         color: aliceblue;
-        padding: 0.5rem 1rem;
-        border: none;
-        outline: none;
-        border-radius: 20px;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s;
-        font-weight: 400;
-        text-transform: uppercase;
+    }
+    
+    .buttons .action_btn {
         display: none;
     }
     
-    .action_btn:hover {
-        scale: 1.01;
-        color: rgb(0, 136, 255);
-        background-color: aliceblue;
-        border: 1px groove rgb(0, 110, 255);
-    }
-    
-    .action_btn:active {
-        scale: 0.95;
-    }
-    
-    .icon-whatsapp {
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        margin-left: 10px;
-        display: inline-block;
-        cursor: pointer;
-        
-    }
-    
-    .icon-whatsapp i {
-        font-size: 25px;
-        padding: 0 3px;
-        transition: all 0.2s;
-    
-    }
-    
-    .icon-whatsapp i:hover {
-        font-size: 35px;
-        padding: 0 3px;
-    }
-}    
-
-@media screen and ( min-width:992px ) and (max-width: 1279px) {
-
-    .header {
-        position: fixed;
+    .buttons {
         display: flex;
-        height: 100px;
-        border-bottom: 1px groove rgba(174, 223, 255, 0.658);
-        padding: 0 2rem;
-        top: 0;
-        left: 0;
-        width: 100%;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        text-transform: uppercase;
-        align-items: center;
-        z-index: 999;
-        
+        margin-left: 2%;
     }
+      
     
-    .header .logo  {
-        align-items: center;
-        justify-content:left;
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-        max-width: 170px;
-        min-width: 130px;
-        margin-right:0px;
-        transition: all 0.3s;
-
-    }
-    
-    .header .logo:hover {
-        transform: scale(1.0);
-    }
-    
-    .navbar {
+    .header label {
         display: flex;
-        width: 100%;
-        height: 80px;
-        max-width: 1200px;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: space-between;
-        box-sizing: border-box;
-        
+        margin-left: 55%;
+    }    
+    
+    #menu-bar:checked ~ .navbar {
+        display: initial;
     }
     
-    .header .navbar .navbar-links {
-        display: flex;
-        gap: 1.5rem;
-        max-width: max-content;
-        align-items: center;
-        justify-content: center;
-        margin-left: 5%;
-        
-    }
 
-
-    .header .navbar .action_btn {
-        text-decoration: none;
-        list-style: none;
-        margin-right: -10%;
-    }  
-       
-    .icon-whatsapp {
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        margin-left: 8%;
-        display: inline-block;
-        cursor: pointer;
-        
-    }
-    
-}    
-
-@media screen and ( min-width:1280px ) and (max-width: 1599px) {
-
-    .header {
-        position: fixed;
-        display: flex;
-        height: 100px;
-        border-bottom: 1px groove rgba(174, 223, 255, 0.658);
-        padding: 0 2rem;
-        top: 0;
-        left: 0;
-        width: 100%;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        text-transform: uppercase;
-        align-items: center;
-        z-index: 999;
-    }
-    
-    .header .logo  {
-        padding: 0;
-        align-items: center;
-        justify-content:left;
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-        max-width: 180px;
-        min-width: 130px;
-        margin-right:0px;
-        transition: all 0.3s;
-
-    }
-}    
-
-@media screen and ( min-width:1600px ) {
-
-    .header {
-        position: fixed;
-        display: flex;
-        height: 100px;
-        border-bottom: 1px groove rgba(174, 223, 255, 0.658);
-        padding: 0 2rem;
-        top: 0;
-        left: 0;
-        width: 100%;
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-        text-transform: uppercase;
-        align-items: center;
-    }
-    
-    .header .logo  {
-        align-items: center;
-        justify-content:left;
-        cursor: pointer;
-        height: auto;
-        width: 100%;
-        max-width: 180px;
-        min-width: 150px;
-        margin-right:0px;
-        transition: all 0.3s;
-
-    }
-    
-    .header .navbar .toggle_btn {
-        color: rgb(70, 70, 70);
-        font-size: 1.5rem;
-        transition: all 0.2s;
-        cursor: pointer;
-        display: none;
-    }
-    
-    .header .navbar .toggle_btn:hover {
-        transform: scale(1.2);
-    
-    }
-    
-    .icon-whatsapp {
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        margin-left: 0%;
-        display: inline-block;
-        cursor: pointer;
-        
-    }
-    
-}    
+}  
