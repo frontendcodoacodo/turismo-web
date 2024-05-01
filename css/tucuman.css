@@ -138,7 +138,7 @@ body {
      /* CardBox Provincias a Visitar */
  
     .tab_wrapper1 {
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); 
+       
       background-color: #b1cdbb8b;
        margin-bottom: 2%;
        margin-top: 2%;
@@ -146,13 +146,17 @@ body {
        margin-left: 2%;
        margin-right: 2%; 
        border-radius: 10px;
+       display: grid;
     }
-
+    .item1 .iframe{
+        max-width: 100%;
+        height: 100%;
+    }
     .grid-ubicacion .item1 { grid-area: mapa; box-shadow: 0 5px 10px #000;
         border-radius: 10px;
         overflow: hidden;
         object-fit: cover;
-       
+        position: relative;
     }
     .grid-ubicacion .item2 { grid-area: ubicacion; }
     .grid-ubicacion .item3 { grid-area: parrafo; }
@@ -191,7 +195,7 @@ body {
 .grid-ubicacion2 .item4 
     { grid-area: casa; 
         position: relative;
-        display: flex;
+        display: grid;
         object-fit: cover;
         box-shadow: 0 5px 10px #000;
         border-radius: 20px;
@@ -405,18 +409,83 @@ body {
     
 
 @media screen and (min-width: 0px) and (max-width:367px) {
+    
+    .texto1 .text-animated .text1{
+       
+        font-size: 16px;
+        padding:0%;
+        margin:0%;
+    }
+   
+    .grid-ubicacion{
+        grid-template-areas: 'mapa' 
+        'ubicacion' 'parrafo';
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        place-items: center;
+        max-width: 367px;
+        margin: 0%;
+        padding: 0%;
+        ;
+        
+            }
+    .item1{
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        overflow: hidden;
+        object-fit: content;
+        
+     }
+    .item2 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 22px;
+        
+    }
+    .item3 #parrafoubi{
+        font-size: 15px;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+
+    .grid-ubicacion2{
+        grid-template-areas: 'casa casa' 
+        'cuna cuna' 'parrafocasa parrafocasa';
+        max-width: 367px;
+        max-height: 570px;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+
+    .item5 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 22px;
+        height: 70px;
+    }
+    .item6 #parrafoubi{
+        font-size: 15px;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+
+
     .tab_wrapper3 {
 
         grid-template-columns: 100%;
-        grid-gap: 0px;
-        padding: 20px;
+        grid-gap: 5px;
+        padding: 10px;
+        margin-top: 2%;
     }
 
     .card_places{
         position: relative;
-        width: 250px;
+        width: 290px;
         height: 250px;
-        margin-top: 30px;
+        margin-top: 5px;
     }
 
     .texto3 h2{
@@ -425,68 +494,108 @@ body {
     }
 
     .texto3 h3{
+        font-size: 1.2rem;
+        margin-top: 2px;
+        margin-bottom: 0px;
+    }
+
+    .card_places .back p {
+        margin-top: 0px;
+        font-size: 0.6rem;
+    }
+    .card_places .back h3 {
+        margin-top: 0px;
         font-size: 1rem;
-        margin-top: 15px;
+    }
+    
+}
+
+@media screen and (min-width: 368px) and (max-width: 767px) {
+
+    .texto1 .text-animated .text1{
+       
+        font-size: 26px;
+        padding:0%;
+        margin:0%;
+        
+    }
+   
+    .tab_wrapper1.grid-ubicacion{
+        grid-template-areas: 'mapa ubicacion' 
+         'mapa parrafo';
+        place-items: center;
+        margin: 0%;
+        padding: 0%;
+        
+            }
+    .item1{
+        max-width: 100%;
+        position: absolute;
+        height: auto;
+        align-content:center;
+        object-fit: cover;
+        overflow: hidden;
+             }
+    .item2 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 22px;
+    }
+    .item3 #parrafoubi{
+        font-size: 16px;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+
+    .grid-ubicacion2{
+        grid-template-areas: 'cuna casa' 
+         'parrafocasa casa';
+        place-items:center;
+        margin-bottom: 1%;
+       
+    }
+    
+    .item5 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 20px;
+        
+    }
+    .item6  #parrafoubi {
+        font-size: 16px;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+    
+          
+    .tab_wrapper3 {
+        grid-template-columns: 100%;
+        grid-gap: 2px;
+        padding: 20px;
+        
+    }
+
+    .card_places{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin-top: 25px;
+    }
+
+    .texto3 h2{
+        font-size: 1rem;
+        display: none;
+    }
+
+    .texto3 h3{
+        font-size: 1.3rem;
+        margin-top: 25px;
         margin-bottom: 0px;
     }
 
     .card_places .back p {
         margin-top: 5px;
-    }
-}
-
-@media screen and (min-width: 368px) and (max-width: 767px) {
-
-    .tab_wrapper3 {
-
-        grid-template-columns: 100%;
-        grid-gap: 0px;
-        padding: 0px;
-    }
-
-  /*  .grid-ubicacion2 {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-areas:
-            'cuna casa'
-            'parrafocasa casa';
-        grid-gap: 15px;
-        align-items: center;
-    }
-
-    .grid-ubicacion2 .item4 {
-        grid-area: casa;
-        position: relative;
-        display: block;
-        object-fit: cover;
-        box-shadow: 0 5px 10px #000;
-        border-radius: 20px;
-        width: 100%;
-        height: 100%;
-    }
-
-    */
-
-    .card_places{
-        position: relative;
-        width: 350px;
-        height: 350px;
-        margin-top: 35px;
-    }
-
-    .texto3 h2{
-        font-size: 2rem;
-        display: none;
-    }
-
-    .texto3 h3{
-        font-size: 1.5rem;
-        margin-top: 15px;
-        margin-bottom: 0px;
-    }
-
-    .card_places .back p {
-        margin-top: 10px;
+        font-size: 0.7rem;
     }
 
 }
@@ -495,6 +604,67 @@ body {
 
 @media screen and (min-width: 768px) and ( max-width: 991px ) {
 
+    .texto1 .text-animated .text1{
+        max-width: 991px;
+        max-height: 120px;
+        font-size: 28px;
+        padding:0%;
+        margin:0%;
+            }
+   
+    .grid-ubicacion{
+        grid-template-areas: 'mapa ubicacion' 
+         'mapa parrafo';
+        place-items: center;
+        grid-template-rows: 0.2fr 0.4fr;
+        justify-content: center;
+            }
+    .item1{
+        width:100%;
+        height: 100%;
+        align-content:center;
+        object-fit: cover;
+     }
+    .item2 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 27px;
+        justify-content: center;
+    }
+    .item3 #parrafoubi{
+        font-size: 18px;
+        margin-bottom: 0.5rem;
+        margin-top: 0rem;
+    }
+
+    .grid-ubicacion2{
+        grid-template-areas: 'cuna casa' 
+         'parrafocasa casa';
+        max-width: 991px;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        margin-bottom: 1%;
+    }
+    .item4{
+        max-width: 270px;
+        max-height: 270px;
+        justify-content: center ;
+        
+    }
+    .item5 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 25px;
+        
+    }
+    .item6  #parrafoubi {
+        font-size: 18px;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+   
+   
+   
     .tab_wrapper3 {
 
         grid-template-columns: 50% auto;
@@ -531,10 +701,72 @@ body {
 
 @media screen and (min-width: 992px) and (max-width:1279px) {
 
+    .texto1 .text-animated .text1{
+        max-width: 1279px;
+        max-height: 320px;
+        font-size: 35px;
+        padding:0%;
+        margin:0%;
+            }
+   
+    .grid-ubicacion{
+        grid-template-areas: 'mapa ubicacion' 
+         'ubicacion parrafo';
+        max-width: 1279px;
+        max-height: 600px;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        
+            }
+    .item1{
+        width: 300px;
+        height: 300px;
+        align-content:center;
+        
+     }
+    .item2 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 40px;
+        justify-content: center;
+    }
+    .item3 #parrafoubi{
+        font-size: 22px;
+        margin-bottom: 0.5rem;
+        margin-top: 0rem;
+    }
+
+    .grid-ubicacion2{
+        grid-template-areas: 'cuna casa' 
+         'parrafocasa casa';
+        max-width: 1279px;
+        max-height: 400px;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        margin-bottom: 1%;
+    }
+    .item4{
+        max-width: 380px;
+        max-height: 380px;
+        justify-content: center ;
+        
+    }
+    .item5 #texto2{
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+        font-size: 33px;
+        
+    }
+    .item6  #parrafoubi {
+        font-size: 22px;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+   
     .tab_wrapper3 {
 
         grid-template-columns: 50% auto;
-        grid-gap: 0px;
+        grid-gap: 15px;
         padding: 40px;
     }
 
@@ -542,9 +774,13 @@ body {
         position: relative;
         width: 400px;
         height: 400px;
-        margin-top: 40px;
+        margin-top: 5px;
+        
     }
 
+    .texto3 h3 {
+        font-size: 2rem;
+    }
     .texto3 h2{
         font-size: 2rem;
     }
@@ -564,6 +800,7 @@ body {
         padding-right: 0rem;
      }
 
+    
      .tab_wrapper3 {
 
         grid-template-columns: 50% auto;
