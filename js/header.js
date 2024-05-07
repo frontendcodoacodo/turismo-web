@@ -11,10 +11,10 @@ header.innerHTML = `
            <li><a href="index.html">Inicio</a></li>                
            <li><a href="#">Donde Ir +</a>
                <ul class="submenu">
-                    <li><a href="#">Mendoza</a></li>
-                    <li><a href="#">San Juan</a></li>
+                    <li><a href="mendoza.html">Mendoza</a></li>
+                    <li><a href="sanjuan.html">San Juan</a></li>
                     <li><a href="tucuman.html">Tucuman</a></li>
-                   <li><a href="#">Corrientes</a></li>
+                    <li><a href="corrientes.html">Corrientes</a></li>
                </ul>
            </li> 
            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li> 
