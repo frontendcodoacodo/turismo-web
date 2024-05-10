@@ -1,8 +1,8 @@
    const a = document.querySelector("#validationNombre");
    const b = document.querySelector("#validationApellido");
    const c = document.querySelector("#validationEmail");
-   const d = document.querySelector("#validationTel");
-   const e = document.querySelector("#validationConsulta");
+   const d = document.querySelector("#validationConsulta");
+   
     var errorNodes = document.querySelectorAll(".error");
 
     function validateForm() {
@@ -28,15 +28,10 @@
             errorFlag = true;
         }
 
-        if (isNaN(d.value) || d.value.length != 10) {
-            errorNodes[3].innerText = "*Por Favor ingrese un Telefono valido";
-            d.classList.add("error-border");
-            errorFlag = true;
-        }
 
-        if (e.value.length < 25) {
-            errorNodes[4].innerText = "*Minimo 25 caracteres";
-            e.classList.add("error-border");
+        if (d.value.length < 25) {
+            errorNodes[5].innerText = "*Minimo 25 caracteres";
+            d.classList.add("error-border");
             errorFlag = true;
         }
 
@@ -55,8 +50,6 @@
         b.classList.remove("error-border");
         c.classList.remove("error-border");
         d.classList.remove("error-border");
-        e.classList.remove("error-border");
-
     }
 
     function emailIsValid(c) {

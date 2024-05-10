@@ -26,13 +26,22 @@
 
                     <div class="row50">
                         <div class="inputBox">
-                            <span>Nombre</span>
+                            <span>Nombre <small>*requerido</small>  </span>
                             <input type="text" placeholder="Juan" id="validationNombre">
                             <small class="error"></small>
                         </div>
                         <div class="inputBox">
                             <span>Apellido</span>
                             <input type="text" placeholder="Perez" id="validationApellido" >
+                            <small class="error"></small>
+                        </div>
+                        <div class="inputBox">
+                            <span>Genero</span>
+
+                            <select name="gen" id="ValidationGen" class="gen">
+                              <option value="masculino">Masculino</option>
+                              <option value="femenino">Femenino</option>
+                            </select>
                             <small class="error"></small>
                         </div>
                     </div>
@@ -43,9 +52,15 @@
                                 <input type="text" placeholder="juanperez@gmail.com" id="validationEmail">
                                 <small class="error"></small>
                             </div>
-                            <div class="inputBox">
-                                <span>Teléfono</span>
-                                <input type="tel" placeholder="011 121212" id="validationTel" >
+                            <div class="inputBox radio">
+                                <span>¿ Como nos Conociste ?</span>
+                                <!-- Group ✅ -->
+                                <input type="radio" name="contact" id="google" class="options">
+                                <label for="google">Google</label>
+                                <input type="radio" name="contact" id="redes" class="options">
+                                <label for="redes">Redes Sociales</label>
+                                <input type="radio" name="contact" id="otros" class="options">
+                                <label for="otros">Otros</label>
                                 <small class="error"></small>
                             </div>
                     </div>
@@ -75,7 +90,7 @@
                     </div>
                     <div>
                         <span><i class="fa-solid fa-envelope"></i></span>
-                        <a href="mailto:experienciaargentinaviajes@gmail.com">experienciaargentinaviajes@gmail.com</a>
+                        <a href="mailto:experienciaargentinaviajes@gmail.com" class="email">experienciaargentinaviajes@gmail.com</a>
                     </div>   
                     <div>
                         <span><i class="fa-solid fa-phone"></i></span>
