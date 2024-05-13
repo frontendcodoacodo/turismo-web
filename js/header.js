@@ -22,7 +22,6 @@ header.innerHTML = `
         </ul>                     
         </div> 
         <div class="buttons">
-        <a href="#" class="action_btn">Consultanos</a>
         <i class="fa-brands fa-whatsapp"></i> 
         <i class="fa-brands fa-facebook"></i>
         </div>
