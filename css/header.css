@@ -45,8 +45,9 @@
     text-decoration: none;
     transition: all 0.3s;
     padding: 2rem 10px;
-    color: rgb(77, 154, 255);
+    color: rgb(0, 110, 255);
     border-bottom: 1px solid rgba(77, 154, 255, 0);
+    font-weight: 600;
 }  
 
 .header .navbar .navbar-links li a:hover { 
@@ -272,6 +273,7 @@
     
     .navbar .navbar-links li .submenu li a {
         color: aliceblue;
+        border: none;
     }
 
     
