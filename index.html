@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <title>TURISMO ARG </title>
 </head>
 <body>
@@ -15,7 +16,7 @@
     <div class="container">
          
         <div class="video_principal">
-            <video autoplay muted loop preload="auto" src="img/Principal_slider1.mp4" ></video>
+          <video autoplay muted loop preload="auto" src="img/Principal_slider1.mp4" ></video>
         </div>
 
         <div class="parrafoppal">
@@ -96,7 +97,9 @@
                             </div>
                             <div class="card_places">
                                 <div class="face front">
-                                    <img src="img/salta-northwest.webp" alt="">
+                                    <img 
+                                    loading="lazy"
+                                    src="img/salta.webp" alt="">
                                     <h3>Region del NOA</h3>
                                 </div>
                                 <div class="face back">
@@ -281,5 +284,7 @@
     <script src="js/footer.js"></script>  
     <script src="js/tabs.js"></script>
     <script src="https://kit.fontawesome.com/fb972792d5.js" crossorigin="anonymous"></script>
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+
 </body>
 </html>
