@@ -23,7 +23,7 @@
         }
 
         if (!emailIsValid(c.value)) {
-            errorNodes[2].innerText = "*Por Favor ingrese un Email valido";
+            errorNodes[3].innerText = "*Por Favor ingrese un Email valido";
             c.classList.add("error-border");
             errorFlag = true;
         }

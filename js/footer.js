@@ -24,9 +24,9 @@ footer.innerHTML = `
                 <li><a href="#">Contacto</a></li>
             </ul> 
             <div class="redes-sociales">
-                <a href="https://es-la.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-whatsapp"></i>
             </div>  
         </div>
     </div>  

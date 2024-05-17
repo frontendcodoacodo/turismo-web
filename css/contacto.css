@@ -161,6 +161,19 @@ body {
         padding: 5px
     }
     
+    .formBox .row50 .inputBox span .sup {
+        color: #ff0000;
+        margin-left: 2%;
+        font-size: 0.7rem;
+        font-weight: 800;
+    }
+    
+    .formBox .row100 .inputBox span .sup {
+        color: #ff0000;
+        font-size: 0.7rem;
+        font-weight: 800;
+    }
+    
     
     .formBox .row50 .inputBox  {
         border-radius: 15px;
