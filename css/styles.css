@@ -52,27 +52,6 @@ body {
       /*Nav menu*/
 
     /*Main   */
-
-    .parrafoppal{ 
-        padding: 35px;
-        text-shadow: 1px 1px 0px rgb(233, 233, 233);
-        font-optical-sizing: auto;
-        font-style:normal;
-        text-align:center;
-        color:rgb(54, 134, 255);
-        background: url(../img/mountains-1412683_1920.webp);
-        background-size:cover; 
-        background-repeat:no-repeat;
-        background-position: center center;
-        border-bottom:1px solid rgba(90, 89, 89, 0.696);
-
-    }
-
-    .parrafoppal p {
-        font-size: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
     
     .frase_container {
      width: 100%;

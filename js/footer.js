@@ -19,9 +19,9 @@ footer.innerHTML = `
         <div class="col">
             <h3>Links <div class="underline"><span></span></div> </h3>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Informacion</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul> 
             <div class="redes-sociales">
                 <i class="fab fa-facebook-f"></i>
