@@ -902,7 +902,7 @@ body {
 
 }
 
-@media screen and ( min-width:992px ) and (max-width: 1279px) { 
+@media screen and ( min-width:992px ) and (max-width: 1280px) { 
     
     body {
         padding-top: 3rem;
@@ -1010,7 +1010,7 @@ body {
     
 }
 
-@media screen and ( min-width:1280px ) and (max-width: 1599px) {
+@media screen and ( min-width:1281px ) and (max-width: 1599px) {
 
     .frase_container .texto_frase {
         padding: 5px;
