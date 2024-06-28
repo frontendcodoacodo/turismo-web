@@ -1,5 +1,5 @@
 -- Usar la base de datos
-USE tursmo_db1;
+USE turismo_db1;
 
 -- Crear tabla guia_turistica
 CREATE TABLE guia_turistica (
