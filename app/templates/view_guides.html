@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+    
+<body>
+    {% include "header.html" %}
+
+        
+    <div class="container">
+        <h1>Guías Turísticas</h1>
+        <div class="row">
+            {% for guia in guias %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ guia.nombre }} {{ guia.apellido }}</h5>
+                    <h6 class="card-subtitle">{{ guia.provincia }}</h6>
+                    <p class="card-text">{{ guia.descripcion }}</p>
+                    <p><strong>Actividades Permitidas:</strong> {{ guia.actividades_permitidas }}</p>
+                </div>
+            </div>
+            {% else %}
+            <p>No hay guías disponibles.</p>
+            {% endfor %}
+        </div>
+    </div>
+        
+
+
+        <script src="https://kit.fontawesome.com/fb972792d5.js" crossorigin="anonymous"></script>
+    
+    {% include "footer.html" %}
+
+    
+</body>
