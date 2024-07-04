@@ -70,6 +70,30 @@ def add_guide():
         return redirect(url_for('view_guides'))
     
     return render_template('add_guide.html')
+    
+@app.route('/add_lugar', methods=['GET', 'POST'])
+def add_place():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        guia_turistica_id = request.form['guia_turistica_id']
+        new_lugar = Lugar(nombre=nombre, guia_turistica_id=guia_turistica_id)
+        db.session.add(new_lugar)
+        db.session.commit()
+        return redirect(url_for('view_places'))
+    guias_turisticas = GuiaTuristica.query.all()
+    return render_template('add_place.html', guias_turisticas=guias_turisticas)
+
+@app.route('/add_actividad', methods=['GET', 'POST'])
+def add_activity():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        lugar_id = request.form['lugar_id']
+        new_actividad = Actividad(nombre=nombre, lugar_id=lugar_id)
+        db.session.add(new_actividad)
+        db.session.commit()
+        return redirect(url_for('view_activities'))
+    lugares = Lugar.query.all()
+    return render_template('add_activity.html', lugares=lugares)
 
 if __name__ == '__main__':
     app.run(debug=True)
